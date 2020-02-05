@@ -2,7 +2,8 @@
 
 ### Some Screenshots
 
-<img src="/images/1.png" height="300em" />
+<img src="/images/1.png" height="400em" />
+
 
 ![GitHub Logo](/images/1.png)
 
