@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_onboarding/page_indicator.dart';
-import 'data.dart';
 import 'package:gradient_text/gradient_text.dart';
+
+import 'data.dart';
 
 void main() => runApp(MaterialApp(
       home: MyApp(),
@@ -19,6 +20,7 @@ class _MyAppState extends State<MyApp> with TickerProviderStateMixin {
   bool lastPage = false;
   AnimationController animationController;
   Animation<double> _scaleAnimation;
+
   @override
   void initState() {
     super.initState();
@@ -41,11 +43,12 @@ class _MyAppState extends State<MyApp> with TickerProviderStateMixin {
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
-            colors: [Color(0xFF485563), Color(0xFF29323C)],
-            tileMode: TileMode.clamp,
-            begin: Alignment.topCenter,
-            stops: [0.0, 1.0],
-            end: Alignment.bottomCenter),
+          colors: [Color(0xFF485563), Color(0xFF29323C)],
+          tileMode: TileMode.clamp,
+          begin: Alignment.topCenter,
+          stops: [0.0, 1.0],
+          end: Alignment.bottomCenter,
+        ),
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
@@ -83,10 +86,13 @@ class _MyAppState extends State<MyApp> with TickerProviderStateMixin {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
-                        Image.asset(page.imageUrl),
+                        Image.asset(
+                          page.imageUrl,
+                          height: MediaQuery.of(context).size.height * .6,
+                        ),
                         Container(
                           margin: EdgeInsets.only(left: 12.0),
-                          height: 130.0,
+                          height: 120.0,
                           child: Stack(
                             children: <Widget>[
                               Opacity(
@@ -94,7 +100,8 @@ class _MyAppState extends State<MyApp> with TickerProviderStateMixin {
                                 child: GradientText(
                                   page.title,
                                   gradient: LinearGradient(
-                                      colors: pageList[index].titleGradient),
+                                    colors: pageList[index].titleGradient,
+                                  ),
                                   style: TextStyle(
                                       fontSize: 100.0,
                                       fontFamily: "Montserrat-Black",
@@ -106,7 +113,8 @@ class _MyAppState extends State<MyApp> with TickerProviderStateMixin {
                                 child: GradientText(
                                   page.title,
                                   gradient: LinearGradient(
-                                      colors: pageList[index].titleGradient),
+                                    colors: pageList[index].titleGradient,
+                                  ),
                                   style: TextStyle(
                                     fontSize: 70.0,
                                     fontFamily: "Montserrat-Black",
@@ -124,9 +132,10 @@ class _MyAppState extends State<MyApp> with TickerProviderStateMixin {
                             child: Text(
                               page.body,
                               style: TextStyle(
-                                  fontSize: 20.0,
-                                  fontFamily: "Montserrat-Medium",
-                                  color: Color(0xFF9B9B9B)),
+                                fontSize: 20.0,
+                                fontFamily: "Montserrat-Medium",
+                                color: Color(0xFF9B9B9B),
+                              ),
                             ),
                           ),
                         )
@@ -138,10 +147,14 @@ class _MyAppState extends State<MyApp> with TickerProviderStateMixin {
             ),
             Positioned(
               left: 30.0,
-              bottom: 55.0,
+              bottom: 30.0,
               child: Container(
-                  width: 160.0,
-                  child: PageIndicator(currentPage, pageList.length)),
+                width: 200.0,
+                child: PageIndicator(
+                  currentPage,
+                  pageList.length,
+                ),
+              ),
             ),
             Positioned(
               right: 30.0,
