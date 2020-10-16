@@ -5,13 +5,10 @@ import 'package:share/share.dart';
 import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+//add u r own details
 class AboutPage extends StatelessWidget {
   @override
-
-
   Widget build(BuildContext context) {
-
-
     _launchURLFACEBOOK() async {
       const url = 'https://www.facebook.com/kechamadavipul.uthaiah/';
       if (await canLaunch(url)) {
@@ -367,7 +364,8 @@ class AvatarImage extends StatelessWidget {
             shape: BoxShape.circle,
             image: DecorationImage(
                 // image: AssetImage('assets/avatar.JPG'),
-                image: new NetworkImage("https://www.vonage.com/content/dam/vonage/us-en/events/Screen%20Shot%202020-09-16%20at%201.55.08%20PM.png")),
+                image: new NetworkImage(
+                    "https://www.vonage.com/content/dam/vonage/us-en/events/Screen%20Shot%202020-09-16%20at%201.55.08%20PM.png")),
           ),
         ),
       ),
