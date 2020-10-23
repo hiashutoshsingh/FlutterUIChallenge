@@ -66,12 +66,7 @@ This document contains certain rules and guidelines that developers are expected
 
 Developers should aim to write clean, maintainable, scalable and testable code. If your code is not testable, that means, it's time to refactor it. The following guidelines might come in handy for this:
 
-* Python: [Hitchiker's Guide to Python](https://docs.python-guide.org/writing/style/), [Google](https://github.com/google/styleguide/blob/gh-pages/pyguide.md)
-* GoLang: [Effective-Go](https://golang.org/doc/effective_go.html)
-* Django: [Django-Styleguide](https://github.com/HackSoftware/Django-Styleguide)
-* JavaScript: [Airbnb](https://github.com/airbnb/javascript)
-* React.JS: [Airbnb](https://github.com/airbnb/javascript/tree/master/react)
 * Flutter/Dart: [Effective-Dart](https://dart.dev/guides/language/effective-dart)
 * Kotlin: [Kotlin Conventions](https://kotlinlang.org/docs/reference/coding-conventions.html)
 * Swift: [Swift Style Guide](https://github.com/github/swift-style-guide), [Google](https://google.github.io/swift/)
-* Docker: [Dev Best Practices](https://docs.docker.com/develop/), [Dockerfile Best Practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
+
